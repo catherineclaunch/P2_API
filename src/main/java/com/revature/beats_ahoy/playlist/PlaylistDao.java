@@ -1,4 +1,10 @@
 package com.revature.beats_ahoy.playlist;
 
-public interface PlaylistDao {
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface PlaylistDao extends CrudRepository<Playlist, Integer> {
+
+
 }
