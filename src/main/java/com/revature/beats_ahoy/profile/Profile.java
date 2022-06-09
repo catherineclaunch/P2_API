@@ -1,5 +1,6 @@
 package com.revature.beats_ahoy.profile;
 
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.stereotype.Component;
 
@@ -97,3 +98,4 @@ public class Profile {
 
 
 }
+

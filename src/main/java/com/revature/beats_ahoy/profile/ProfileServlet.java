@@ -1,6 +1,7 @@
 package com.revature.beats_ahoy.profile;
 
 
+
 import com.revature.beats_ahoy.util.interfaces.Authable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -19,5 +20,6 @@ public class ProfileServlet {
     public ProfileServlet(ProfileServices profileServices){
         this.profileServices = profileServices;
     }
+
 
 }
