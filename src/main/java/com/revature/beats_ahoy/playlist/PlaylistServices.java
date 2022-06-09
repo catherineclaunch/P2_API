@@ -1,5 +1,6 @@
 package com.revature.beats_ahoy.playlist;
 
+
 import com.revature.beats_ahoy.util.interfaces.Serviceable;
 
 import java.util.List;
@@ -34,4 +35,5 @@ public class PlaylistServices implements Serviceable<Playlist> {
     public boolean validateInput(Playlist object) {
         return false;
     }
+
 }
