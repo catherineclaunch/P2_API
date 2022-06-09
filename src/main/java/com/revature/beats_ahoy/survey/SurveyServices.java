@@ -1,4 +1,5 @@
 package com.revature.beats_ahoy.survey;
+
 import com.revature.beats_ahoy.util.interfaces.Serviceable;
 import org.springframework.stereotype.Service;
 
@@ -37,4 +38,4 @@ public class SurveyServices implements Serviceable<Survey> {
     public boolean validateInput(Survey object) {
         return false;
     }
-}
+
