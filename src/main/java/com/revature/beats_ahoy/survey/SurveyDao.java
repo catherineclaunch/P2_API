@@ -1,4 +1,6 @@
 package com.revature.beats_ahoy.survey;
 
-public interface SurveyDao {
+import org.springframework.data.repository.CrudRepository;
+
+public interface SurveyDao extends CrudRepository<Survey, Integer> {
 }
