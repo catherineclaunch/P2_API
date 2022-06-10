@@ -13,5 +13,6 @@ public class beatsAhoyApplication {
     public static void main(String[] args) {
         SpringApplication.run(beatsAhoyApplication.class, args);
     }
+}
 
 
