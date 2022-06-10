@@ -11,8 +11,9 @@ public class Playlist {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
-    private String id;
-    @ManyToOne
+    private int id;
+    @ManyToOne(optional = false)
+    @JoinColumn(name = "username_playlist", referencedColumnName = "username")
     private Users usernamePlaylist;
     private String url;
     private String fieldOne;
@@ -65,7 +66,7 @@ public class Playlist {
         return fieldTwo;
     }
 
-    public String getId() {
+    public int getId() {
         return id;
     }
 
@@ -77,7 +78,7 @@ public class Playlist {
         this.usernamePlaylist = usernamePlaylist;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

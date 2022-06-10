@@ -12,7 +12,8 @@ public class Profile {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
     private int id;
-    @OneToOne
+    @OneToOne(optional = false)
+    @JoinColumn(name = "username_profile", referencedColumnName = "username")
     private Users usernameProfile;
     private String favoriteGenre;
     private String favoriteSong;
