@@ -1,14 +1,22 @@
 package com.revature.beats_ahoy.profile;
 
 
+
 import com.revature.beats_ahoy.users.Users;
 
+
+import com.fasterxml.jackson.annotation.JsonProperty;
+import org.springframework.stereotype.Component;
+
 import javax.persistence.*;
+
+
 
 @Entity
 @Table(name = "profile")
 public class Profile {
     @Id
+
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name="id")
     private int id;
@@ -90,3 +98,4 @@ public class Profile {
         this.usernameProfile = usernameProfile;
     }
 }
+

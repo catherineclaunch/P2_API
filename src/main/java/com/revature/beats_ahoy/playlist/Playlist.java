@@ -1,6 +1,7 @@
 package com.revature.beats_ahoy.playlist;
 
 
+
 import com.revature.beats_ahoy.users.Users;
 
 import javax.persistence.*;
@@ -110,3 +111,4 @@ public class Playlist {
         this.url = url;
     }
 }
+

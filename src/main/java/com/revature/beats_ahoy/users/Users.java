@@ -2,7 +2,16 @@ package com.revature.beats_ahoy.users;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+<<<<<<< HEAD
 import javax.persistence.*;
+=======
+import javax.persistence.Entity;
+import javax.persistence.Id;
+
+import javax.persistence.OneToMany;
+
+import javax.persistence.Table;
+>>>>>>> 7ff45eb65a9d56fcb1afdd966abca8c012126426
 
 @Entity
 @Table(name = "users")

@@ -1,5 +1,6 @@
 package com.revature.beats_ahoy.users;
 
+
 import com.revature.beats_ahoy.playlist.Playlist;
 import com.revature.beats_ahoy.util.interfaces.Serviceable;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -75,4 +76,5 @@ public class UsersServices implements Serviceable<Users> {
     public boolean validateUsernameNotUsed (String username){
         return usersDao.existsById(username);
     }
+
 }
