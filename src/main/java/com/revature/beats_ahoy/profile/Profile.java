@@ -1,101 +1,100 @@
 package com.revature.beats_ahoy.profile;
 
 
+
+import com.revature.beats_ahoy.users.Users;
+
+
 import com.fasterxml.jackson.annotation.JsonProperty;
 import org.springframework.stereotype.Component;
 
 import javax.persistence.*;
 
 
+
 @Entity
 @Table(name = "profile")
 public class Profile {
     @Id
+
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name="id")
     private int id;
+    @OneToOne
+    private Users usernameProfile;
+    private String favoriteGenre;
+    private String favoriteSong;
+    private String favoriteArtist;
+    private String favoriteAlbum;
 
-    private String favorite_genre;
-
-    private String favorite_song;
-    private String favorite_artist;
-    private String favorite_album;
-    @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name= "username", referencedColumnName = "username")
-    private String username;
-
-    private String dob;
-
-
-
-    public Trainer(String fname, String lname, String email, String password, String dob) {
-        super();
-        this.fname = fname;
-        this.lname = lname;
-        this.email = email;
-        this.password = password;
-        this.dob = dob;
-    }
-
-    public Trainer(String password){
-        this.password = password;
-    }
-
-    public Trainer() {
+    public Profile(){
 
     }
-
-    // Getters & Setters
-    public String getFname() {
-        return fname;
-    }
-
-
-    public void setFname(String fname) {
-        this.fname = fname;
-    }
-
-
-    public String getLname() {
-        return lname;
-    }
-
-    public void setLname(String lname) {
-        this.lname = lname;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public String getDob() {
-        return dob;
-    }
-
-    public void setDob(String dob) {
-        this.dob = dob;
+    public Profile(Users usernameProfile, String favoriteGenre, String favoriteAlbum, String favoriteArtist, String favoriteSong){
+        this.usernameProfile = usernameProfile;
+        this.favoriteAlbum = favoriteAlbum;
+        this.favoriteArtist = favoriteArtist;
+        this.favoriteGenre = favoriteGenre;
     }
 
     @Override
     public String toString() {
-        return "Trainer{" +
-                "fname='" + fname + '\'' +
-                ", lname='" + lname + '\'' +
-                ", email='" + email + '\'' +
-                ", dob='" + dob + '\'' +
+        return "Playlist{" +
+                "id='" + id + '\'' +
+                ", usernameProfile=" + usernameProfile +
+                ", favoriteGenre=" + favoriteGenre +
+                ", favoriteSong=" + favoriteSong +
+                ", favoriteArtist=" + favoriteArtist +
+                ", favoriteAlbum=" + favoriteAlbum +
                 '}';
     }
 
+    public int getId() {
+        return id;
+    }
 
+    public String getFavoriteAlbum() {
+        return favoriteAlbum;
+    }
+
+    public String getFavoriteArtist() {
+        return favoriteArtist;
+    }
+
+    public String getFavoriteGenre() {
+        return favoriteGenre;
+    }
+
+    public String getFavoriteSong() {
+        return favoriteSong;
+    }
+
+    public Users getUsernameProfile() {
+        return usernameProfile;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public void setFavoriteAlbum(String favoriteAlbum) {
+        this.favoriteAlbum = favoriteAlbum;
+    }
+
+    public void setFavoriteArtist(String favoriteArtist) {
+        this.favoriteArtist = favoriteArtist;
+    }
+
+    public void setFavoriteGenre(String favoriteGenre) {
+        this.favoriteGenre = favoriteGenre;
+    }
+
+    public void setFavoriteSong(String favoriteSong) {
+        this.favoriteSong = favoriteSong;
+    }
+
+    public void setUsernameProfile(Users usernameProfile) {
+        this.usernameProfile = usernameProfile;
+    }
 }
 

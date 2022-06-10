@@ -1,6 +1,9 @@
 package com.revature.beats_ahoy.playlist;
 
 
+public class PlaylistServlet {
+
+
 
 
     private final PlaylistServices playlistServices;
@@ -8,5 +11,6 @@ package com.revature.beats_ahoy.playlist;
     public PlaylistServlet(PlaylistServices playlistServices) {
         this.playlistServices = playlistServices;
     }
+
 
 }
