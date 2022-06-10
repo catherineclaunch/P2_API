@@ -1,5 +1,6 @@
 package com.revature.beats_ahoy.profile;
 
+
 import com.revature.beats_ahoy.playlist.Playlist;
 import com.revature.beats_ahoy.util.interfaces.Serviceable;
 import org.springframework.stereotype.Service;
@@ -46,4 +47,5 @@ public class ProfileServices implements Serviceable<Profile> {
     public boolean validateInput(Profile object) {
         return false;
     }
+
 }

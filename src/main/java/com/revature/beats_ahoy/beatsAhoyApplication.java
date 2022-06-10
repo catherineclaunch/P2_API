@@ -1,5 +1,6 @@
 package com.revature.beats_ahoy;
 
+
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
@@ -13,4 +14,4 @@ public class beatsAhoyApplication {
         SpringApplication.run(beatsAhoyApplication.class, args);
     }
 
-}
+

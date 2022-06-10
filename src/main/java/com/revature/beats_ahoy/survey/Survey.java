@@ -1,6 +1,7 @@
 package com.revature.beats_ahoy.survey;
 
 
+
 import javax.persistence.*;
 
 @Entity
@@ -32,3 +33,4 @@ public class Survey {
         return question;
     }
 }
+

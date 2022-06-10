@@ -1,5 +1,6 @@
 package com.revature.beats_ahoy.users;
 
+
 import com.revature.beats_ahoy.util.interfaces.Authable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -48,6 +49,7 @@ public class UsersServlet implements Authable {
     public int showDataTypeInPath(@RequestParam int x){
         return x;
     }
+
 
 
 
