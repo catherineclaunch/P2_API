@@ -30,7 +30,7 @@ public class ProfileServlet {
     }
 
     @GetMapping("/profile/{id}")
-    public ResponseEntity<Profile> findTrainerById(@PathVariable String id) {
+    public ResponseEntity<Profile> findUserById(@PathVariable String id) {
         Profile profile = profileServices.readById(id);
         return new ResponseEntity<>(profile, HttpStatus.OK);
     }

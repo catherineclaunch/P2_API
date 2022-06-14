@@ -26,7 +26,7 @@ public class PlaylistServlet {
     }
 
     @GetMapping("/playlist/{id}")
-    public ResponseEntity<Playlist> findTrainerById(@PathVariable String results) {
+    public ResponseEntity<Playlist> findUserById(@PathVariable String results) {
         Playlist foundResults = playlistServices.readById(results);
         return new ResponseEntity<>(foundResults, HttpStatus.OK);
     }

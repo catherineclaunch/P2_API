@@ -31,12 +31,12 @@ public class UsersServlet implements Authable {
     }
 
     @GetMapping("/userEx")
-    public void trainerEx(){
+    public void userEx(){
         throw new com.revature.pokedex.util.exceptions.AuthenticationException("Oh no User not auth");
     }
 
     @GetMapping("/user/{username}")
-    public ResponseEntity<Users> findTrainerById(@PathVariable String username){
+    public ResponseEntity<Users> findUserById(@PathVariable String username){
         Users foundUser = usersServices.readById(username);
         return new ResponseEntity<>(foundUser, HttpStatus.OK);
     }

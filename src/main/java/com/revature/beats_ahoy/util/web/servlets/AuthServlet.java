@@ -29,9 +29,9 @@ public class AuthServlet {
 
     @PostMapping
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public void authorizeTrainer(@RequestBody LoginCreds loginCreds, HttpSession httpSession){
-        Users authUser = usersServices.authenticateUser(loginCreds.getEmail(), loginCreds.getPassword());
-        httpSession.setAttribute("authTrainer", authUser);
+    public void authorizeUser(@RequestBody LoginCreds loginCreds, HttpSession httpSession){
+        Users authUser = usersServices.authenticateUser(loginCreds.getUsername(), loginCreds.getPassword());
+        httpSession.setAttribute("authUser", authUser);
     }
 
     @DeleteMapping

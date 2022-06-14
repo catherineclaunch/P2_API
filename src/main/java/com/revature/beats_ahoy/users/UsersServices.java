@@ -84,13 +84,13 @@ public class UsersServices implements Serviceable<Users> {
             throw new com.revature.pokedex.util.exceptions.InvalidRequestException("Either email or password is an invalid entry. Please try logging in again");
         }
 
-        Optional<Users> authenticatedTrainer = usersDao.authenticateUser(username, password);
+        Optional<Users> authenticateUser = usersDao.authenticateUser(username, password);
 
-        if (!authenticatedTrainer.isPresent()){
+        if (!authenticateUser.isPresent()){
             throw new com.revature.pokedex.util.exceptions.AuthenticationException("Unauthenticated user, information provided was not consistent with our database.");
         }
 
-        return authenticatedTrainer.get();
+        return authenticateUser.get();
 
     }
 }

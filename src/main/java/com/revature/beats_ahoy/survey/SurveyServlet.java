@@ -27,7 +27,7 @@ public class SurveyServlet {
     }
 
     @GetMapping("/results/{id}")
-    public ResponseEntity<Survey> findTrainerById(@PathVariable String results) {
+    public ResponseEntity<Survey> findUserById(@PathVariable String results) {
         Survey foundResults = surveyServices.readById(results);
         return new ResponseEntity<>(foundResults, HttpStatus.OK);
     }
