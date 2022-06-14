@@ -3,6 +3,7 @@ package com.revature.beats_ahoy.users;
 
 import com.revature.beats_ahoy.playlist.Playlist;
 import com.revature.beats_ahoy.util.interfaces.Serviceable;
+import org.apache.catalina.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -77,4 +78,20 @@ public class UsersServices implements Serviceable<Users> {
         return usersDao.existsById(username);
     }
 
+    public Users authenticateUser(String username, String password){
+
+        if(password == null || password.trim().equals("") || username == null || username.trim().equals("")) {
+            throw new com.revature.pokedex.util.exceptions.InvalidRequestException("Either email or password is an invalid entry. Please try logging in again");
+        }
+
+        Optional<Users> authenticatedTrainer = usersDao.authenticateUser(username, password);
+
+        if (!authenticatedTrainer.isPresent()){
+            throw new com.revature.pokedex.util.exceptions.AuthenticationException("Unauthenticated user, information provided was not consistent with our database.");
+        }
+
+        return authenticatedTrainer.get();
+
+    }
 }
+

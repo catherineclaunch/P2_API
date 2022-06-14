@@ -12,6 +12,7 @@ public class Survey {
     @Column(name="id")
     private int id;
     private String question;
+    private int answer;
 
     public Survey(){
 
@@ -31,6 +32,14 @@ public class Survey {
 
     public String getQuestion() {
         return question;
+    }
+
+    public int getAnswer() {
+        return answer;
+    }
+
+    public void setAnswer(int answer) {
+        this.answer = answer;
     }
 }
 
