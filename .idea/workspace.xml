@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c0530662-c52d-40cc-be61-a0dbfeeccf24" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/beats_ahoy/playlist/Playlist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/beats_ahoy/playlist/Playlist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/beats_ahoy/playlist/PlaylistDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/beats_ahoy/playlist/PlaylistDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/beats_ahoy/playlist/PlaylistServices.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/beats_ahoy/playlist/PlaylistServices.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/revature/beats_ahoy/playlist/PlaylistServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/revature/beats_ahoy/playlist/PlaylistServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
