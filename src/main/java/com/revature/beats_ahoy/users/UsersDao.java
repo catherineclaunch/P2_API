@@ -12,6 +12,6 @@ import java.util.Optional;
 @Repository
 public interface UsersDao extends CrudRepository<Users, String> {
 
-    @Query(value = "FROM users WHERE username= :username AND password = :password")
+    @Query(value = "FROM Users WHERE username= :username AND password = :password")
     Optional<Users> authenticateUser(String username, String password);
 }

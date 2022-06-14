@@ -4,6 +4,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.NonNull;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
@@ -24,6 +25,7 @@ public class Users {
     @Id
     private String username;
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
+    @NonNull
     private String password;
 
 }
