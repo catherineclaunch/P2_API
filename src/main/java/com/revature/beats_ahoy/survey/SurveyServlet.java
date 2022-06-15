@@ -2,6 +2,7 @@ package com.revature.beats_ahoy.survey;
 
 
 import com.revature.beats_ahoy.users.Users;
+import com.revature.beats_ahoy.util.interfaces.Authable;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -11,7 +12,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-public class SurveyServlet {
+public class SurveyServlet  implements Authable {
 
     private final SurveyServices surveyServices;
 

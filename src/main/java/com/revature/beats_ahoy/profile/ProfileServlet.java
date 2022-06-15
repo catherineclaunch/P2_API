@@ -14,7 +14,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin
-public class ProfileServlet {
+public class ProfileServlet  implements Authable{
 
     private final ProfileServices profileServices;
 
