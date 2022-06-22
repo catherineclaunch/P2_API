@@ -1,4 +1,8 @@
-## Welcome to the Beats Ahoy API
+## Description
+BeatsAhoy allows its users to create an account and login to create a specialized playlist based off the following attributes. (Current Mood, Time of Day, Energy Level, Spontaneous level). These attributes are placed on a scale from 1 being the lowest and 10 being the highest. The following attributes are asked in a quiz like format. The results are then saved on the users profile along with a link to the playlist generated on the Spotify platform. The users can see all of the recently created playlists as well as their created playlists on the dashboard page.
+
+
+## User Stories
 
 As a [user] I will be able to generate a playlist, add friends, view all playlists
 As a [admin] I will be able to delete users, edit questions
